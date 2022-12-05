@@ -15,15 +15,7 @@ def find_permutation(n_clusters, real_labels, labels):
     return permutation
 
 def plant_clustering():
-    data = load_iris()
-    X, y = data.data, data.target
-    print(X)
-    model = KMeans(3, random_state=0)
-    model.fit(X)
-    permutation = find_permutation(3, y, model.labels_)
-    new_labels = [ permutation[label] for label in model.labels_]
-    score = accuracy_score(y, new_labels)
-    return score
+    pass
 
 def main():
     print(plant_clustering())
